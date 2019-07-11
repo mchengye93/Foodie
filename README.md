@@ -1,4 +1,4 @@
-# Food Recommender #
+# Foodie #
 
 
 
