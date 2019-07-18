@@ -19,6 +19,7 @@ class RestaurantItem extends React.Component {
   
 
   render() {
+    
     var googleMap= 'https://maps.google.com/?q='+this.props.restaurant.location;
     return(
       <div id="restaurantItem">

@@ -129,6 +129,9 @@ class App extends React.Component {
     console.log('Delete restaurant id:', restaurantId);
     axios.delete('/restaurant', {
       data: { id: restaurantId}
+     }).then((data)=> {
+       console.log(data);
+       this.setState({recommended: ''});
      }).catch((err)=> {
        console.log(err);
      })
