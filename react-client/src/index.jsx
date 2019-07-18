@@ -131,6 +131,7 @@ class App extends React.Component {
       data: { id: restaurantId}
      }).then((data)=> {
        console.log(data);
+       this.getCategoryList();
        this.setState({recommended: ''});
      }).catch((err)=> {
        console.log(err);
