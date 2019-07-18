@@ -1,17 +1,9 @@
-DROP DATABASE IF EXISTS food;
+DROP DATABASE IF EXISTS foodie;
 
-CREATE DATABASE food;
+CREATE DATABASE foodie;
 
-USE food;
+USE foodie;
 
-CREATE TABLE food (
-  id serial PRIMARY KEY,
-  cuisine varchar(50) NOT NULL,
-  region varchar(50) NOT NULL,
-  location varchar(150) NOT NULL,
-  foodList text NOT NULL,
-  imageUrl text
-);
 
 CREATE TABLE restaurants (
   id serial PRIMARY KEY,
