@@ -69,6 +69,19 @@ app.post('/restaurant', function (req,res) {
   })
 });
 
+app.delete('/restaurant', function (req,res) {
+  var restaurantId = req.body.id;
+  console.log('inside restaurant delete server')
+  console.log(restaurantId);
+  restaurants.deleteRestaurant( restaurantId, function(err,data) {
+    if(err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+  })
+});
+
 // app.post('/restaurant', (req,res)=> {
 //   var restaurantObj = req.body;
 //   console.log(restaurantObj);

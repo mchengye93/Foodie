@@ -56,7 +56,20 @@ var addRestaurant = function(restaurantObject, callback) {
         } else {
             callback(null,results);
         }
-    })
+    });
+  }
+
+  var deleteRestaurant = function(restaurantId, callback) {
+    console.log('inside db postgrest deleteResutant',restaurantId);
+    
+    postgresDb.query(`DELETE from restaurants WHERE id = ${restaurantId}` , function(err,results) {
+        if (err){
+          console.log(err);
+            callback(err,null);
+        } else {
+            callback(null,results);
+        }
+    });
   }
   var getAllCategory = function(callback){
     console.log('postgres getAllcategory');
@@ -88,6 +101,7 @@ var addRestaurant = function(restaurantObject, callback) {
       addRestaurant,
       selectCategory,
       getAllCategory,
-      getRecommendation
+      getRecommendation,
+      deleteRestaurant,
 
   }

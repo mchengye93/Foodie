@@ -64,6 +64,7 @@ class App extends React.Component {
   componentWillMount(){
   console.log('component will mount!');
   this.getCategoryList();
+  
 
   }
   // addFood(restaurantObject){
@@ -123,6 +124,12 @@ class App extends React.Component {
       })
       
   }
+  deleteRestaurant(restaurantId) {
+    axios.delete('/restaurant', {
+      data: { id: restaurantId}
+     });
+  }
+  
 
 
 
