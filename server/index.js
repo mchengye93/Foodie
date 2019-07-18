@@ -13,7 +13,7 @@ const yelp = require('yelp-fusion');
 const apiKey = 'vilsC_dxi8j0B-zlZe5mJ4ia3E_12HK4-Q4xeOnYQchP8671Q2iFRFcCD3KhgA70UidkPlRUkbI0TyQSsUGzPm3D_pity25C9mcFpRpFpDmGJ_HqkE_yewIVkWQOXXYx';
 
 
-// UNCOMMENT FOR REACT
+
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/json
@@ -82,15 +82,7 @@ app.delete('/restaurant', function (req,res) {
   })
 });
 
-// app.post('/restaurant', (req,res)=> {
-//   var restaurantObj = req.body;
-//   console.log(restaurantObj);
-//   res.status(200);
-//   res.send();
 
-
-
-// })
 app.get('/yelp', (req,res)=> {
   var term = req.query.term;
 
