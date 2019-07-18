@@ -61,6 +61,8 @@ class App extends React.Component {
     this.addRestaurantForm = this.addRestaurantForm.bind(this);
     this.addRestaurant = this.addRestaurant.bind(this);
     this.deleteRestaurant = this.deleteRestaurant.bind(this);
+
+    
   }
   componentWillMount(){
   console.log('component will mount!');
@@ -165,6 +167,7 @@ class App extends React.Component {
       return(
         <CenterDiv>
         <Title>Food Recommender</Title>
+        <Button onClick={this.home}>Home</Button>
         <SearchRestaurantForm addRestaurant={this.addRestaurant}/>
   
        
