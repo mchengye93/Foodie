@@ -62,6 +62,7 @@ class App extends React.Component {
     this.addRestaurant = this.addRestaurant.bind(this);
     this.deleteRestaurant = this.deleteRestaurant.bind(this);
 
+    this.home = this.home.bind(this);
     
   }
   componentWillMount(){
@@ -138,6 +139,10 @@ class App extends React.Component {
      }).catch((err)=> {
        console.log(err);
      })
+  }
+
+  home() {
+    this.setState({addRestaurant: false});
   }
   
 
