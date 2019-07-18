@@ -60,6 +60,7 @@ class App extends React.Component {
     this.showRecommendation  = this.showRecommendation.bind(this);
     this.addRestaurantForm = this.addRestaurantForm.bind(this);
     this.addRestaurant = this.addRestaurant.bind(this);
+    this.deleteRestaurant = this.deleteRestaurant.bind(this);
   }
   componentWillMount(){
   console.log('component will mount!');
@@ -127,7 +128,9 @@ class App extends React.Component {
   deleteRestaurant(restaurantId) {
     axios.delete('/restaurant', {
       data: { id: restaurantId}
-     });
+     }).catch((err)=> {
+       console.log(err);
+     })
   }
   
 
