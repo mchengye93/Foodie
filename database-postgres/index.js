@@ -62,7 +62,7 @@ var addRestaurant = function(restaurantObject, callback) {
   var deleteRestaurant = function(restaurantId, callback) {
     console.log('inside db postgrest deleteResutant',restaurantId);
     
-    postgresDb.query(`DELETE from restaurants WHERE id = ${restaurantId}` , function(err,results) {
+    postgresDb.query(`DELETE from restaurants WHERE id =${restaurantId}` , function(err,results) {
         if (err){
           console.log(err);
             callback(err,null);
