@@ -13,6 +13,7 @@ class RestaurantItem extends React.Component {
       this.props.deleteRestaurant(this.props.restaurant.id);
     } else {
       //Do nothing;
+      console.log('Did not delete restautant.');
     }
   }
   

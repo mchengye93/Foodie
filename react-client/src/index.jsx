@@ -126,6 +126,7 @@ class App extends React.Component {
       
   }
   deleteRestaurant(restaurantId) {
+    console.log('Delete restaurant id:', restaurantId);
     axios.delete('/restaurant', {
       data: { id: restaurantId}
      }).catch((err)=> {
@@ -150,7 +151,7 @@ class App extends React.Component {
         <Title>Food Recommender</Title>
         <Button onClick={this.addRestaurantForm}>Add Restaurant</Button>
         <RecommendationForm categoryList={this.state.categoryList} showRecommendation={this.showRecommendation}/>
-        <RestaurantItem restaurant={this.state.recommended}/>
+        <RestaurantItem restaurant={this.state.recommended} deleteRestaurant={this.deleteRestaurant}/>
       </CenterDiv>
         );
     }
